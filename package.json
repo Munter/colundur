@@ -1,0 +1,29 @@
+{
+  "name": "colundur",
+  "version": "0.0.0",
+  "description": "A React calendar application **DO NOT USE**",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "calendar",
+    "view",
+    "day",
+    "week",
+    "month"
+  ],
+  "author": "Peter Müller <munter@fumle.dk>",
+  "license": "MIT",
+  "dependencies": {
+    "ambitus": "^0.3.0",
+    "moment": "^2.9.0",
+    "moment-range": "^1.0.5",
+    "react": "^0.12.2",
+    "react-router": "^0.11.6"
+  },
+  "devDependencies": {
+    "watchify": "^2.3.0"
+  }
+}
