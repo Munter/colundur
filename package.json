@@ -4,6 +4,7 @@
   "description": "A React calendar application **DO NOT USE**",
   "main": "index.js",
   "scripts": {
+    "watchify": "watchify src/init.js -o app/bundle.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -16,6 +17,17 @@
   ],
   "author": "Peter Müller <munter@fumle.dk>",
   "license": "MIT",
+  "browserify": {
+    "transform": [
+      [
+        "reactify",
+        {
+          "es6": true,
+          "target": "es5"
+        }
+      ]
+    ]
+  },
   "dependencies": {
     "ambitus": "^0.3.0",
     "moment": "^2.9.0",
@@ -24,6 +36,7 @@
     "react-router": "^0.11.6"
   },
   "devDependencies": {
+    "reactify": "^1.0.0",
     "watchify": "^2.3.0"
   }
 }
