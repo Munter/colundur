@@ -6,6 +6,7 @@
   "scripts": {
     "lint": "jsxhint --exclude-path .gitignore --jsx-only .",
     "watchify": "watchify src/init.js -o app/bundle.js",
+    "serve": "livestyle -r app --compilesass --autoprefixer --watchhtml --processimages",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -37,7 +38,10 @@
     "react-router": "^0.11.6"
   },
   "devDependencies": {
+    "autoprefixer": "^5.1.0",
     "jsxhint": "^0.9.0",
+    "livestyle": "^1.2.0",
+    "node-sass": "^2.0.0-beta",
     "reactify": "^1.0.0",
     "watchify": "^2.3.0"
   }
