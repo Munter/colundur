@@ -6,7 +6,8 @@
   "scripts": {
     "lint": "jsxhint --exclude-path .gitignore --jsx-only .",
     "watchify": "watchify src/init.js -o app/bundle.js",
-    "serve": "livestyle -r app --compilesass --autoprefixer --watchhtml --processimages",
+    "livestyle": "livestyle -r app --compilesass --autoprefixer --watchhtml --processimages",
+    "serve": "parallel --ungroup ::: 'npm run watchify' 'npm run livestyle'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
