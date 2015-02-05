@@ -1,6 +1,7 @@
 var React = require('react');
+var classSet = require('react-classset');
 var Ambitus = require('ambitus');
-var moment = require('moment');
+// var moment = require('moment');
 
 var Colundur = React.createClass({
   displayName: 'Colundur',
@@ -26,9 +27,13 @@ var Colundur = React.createClass({
           </nav>
 
           <nav>
-            <button onClick={ambitus.interval.bind(ambitus, 'day')}>Day</button>
-            <button onClick={ambitus.interval.bind(ambitus, 'week')}>Week</button>
-            <button onClick={ambitus.interval.bind(ambitus, 'month')}>Month</button>
+            {['day', 'week', 'month'].map(interval => {
+              return (<button
+                onClick={ambitus.interval.bind(ambitus, interval)}
+                className={classSet({ 'is-active': this.state.interval === interval })}>
+                  {interval}
+                </button>);
+            })}
           </nav>
         </header>
 
